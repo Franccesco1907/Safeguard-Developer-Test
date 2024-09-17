@@ -1,0 +1,24 @@
+<div class="modal" [ngClass]="{'show': isModalOpen}">
+  <div class="modal-content">
+    <span class="close" (click)="onClose()">&times;</span>
+    
+    <h2 class="modal-title">{{ isEditMode ? 'Edit Note' : 'Add a New Note' }}</h2>
+    
+    <form (ngSubmit)="onSave()">
+      <input 
+        type="text" 
+        placeholder="Title" 
+        [(ngModel)]="newNote.title" 
+        name="title" 
+        required
+      />
+      <textarea 
+        placeholder="Body" 
+        [(ngModel)]="newNote.body" 
+        name="body" 
+        required
+      ></textarea>
+      <button type="submit">Save Note</button>
+    </form>
+  </div>
+</div>

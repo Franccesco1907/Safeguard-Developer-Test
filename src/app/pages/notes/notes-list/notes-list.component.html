@@ -1,0 +1,8 @@
+<div class="notes-list">
+  <app-note-item 
+    *ngFor="let note of filteredNotes" 
+    [note]="note" 
+    (editNote)="onEditNote($any($event))" 
+    (deleteNote)="onDeleteNote($any($event))">
+  </app-note-item>
+</div>

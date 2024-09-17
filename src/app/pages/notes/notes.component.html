@@ -3,4 +3,32 @@
     <p>Using the <code>NotesComponent</code>, create a place to add a new note, as well as view other notes that have been created.
         In this task we'd like you to show off your creativity and design skills, so bonus points for extra features or out-of-the-box ideas.</p>
     <p class="alert">You do not need a backend to save the data, save to the NotesService only.</p>
-</div>
+
+    <div class="notes-page">
+      <h1>Notes</h1>
+      
+      <!-- Search Bar -->
+      <input 
+        type="text" 
+        placeholder="Search notes..." 
+        [(ngModel)]="searchQuery" 
+        (input)="onSearch()" 
+        class="search-bar" 
+      />
+    
+      <!-- Add Note Form -->
+      <app-note-form>
+      </app-note-form>
+    
+      <!-- Notes List -->
+      <app-notes-list
+        [filteredNotes]="filteredNotes"
+      ></app-notes-list>
+  
+      <button class="add-note" (click)="openModal()">
+        +
+      </button>
+    </div>
+  </div>
+
+
