@@ -1,0 +1,8 @@
+<div [ngClass]="['note', note.size]" class="note-item" (click)="onEdit()">
+  <div class="note-header">
+    <h3>{{ note.title }}</h3>
+    <!-- Cambiamos el botón por una "X" -->
+    <span (click)="onDelete($event)" class="delete-icon">&times;</span>
+  </div>
+  <p>{{ note.body }}</p>
+</div>

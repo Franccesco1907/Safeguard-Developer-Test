@@ -22,5 +22,4 @@ export class HeaderComponent {
     constructor(public appService: AppService) {
         this.currentTemperature = appService.currentTemperature;
     }
-
 }

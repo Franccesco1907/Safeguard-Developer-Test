@@ -22,7 +22,16 @@ export class SmallestIntegerComponent implements OnInit {
      * Write your code inside this function
      */
     smallestMissingInt(A: number[]): number {
-        return 1;
+        // We create a set of positive numbers from the array
+        const positiveSet = new Set<number>(A.filter(num => num > 0));
+        let smallPositiveMissingInt = 1;
+
+        // We iterate through the positive numbers in the set
+        while(positiveSet.has(smallPositiveMissingInt)) {
+            smallPositiveMissingInt++;
+        }
+
+        return smallPositiveMissingInt;
     }
 
     /**
