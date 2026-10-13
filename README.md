@@ -1,13 +1,8 @@
-# SafeGuard✓Privacy Angular Test
+# SafeGuard Privacy Angular exercises
 
-This project uses Angular 18.
+Angular 18 app with notes, a draggable taskboard, smallest-integer and weather exercises.
 
-To get started, fork this repository and run the project with `ng serve`.
-
-## Live Version
-
-Visit the [GitHub page](https://safeguardprivacy.github.io/Developer-Test/) to see a live version of this Angular application.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm ci`, then `npm start`; open `http://localhost:4200`.
+Build with `npm run build`. The checked-in specs need a configured Karma/Jasmine test setup; there is no npm test script.
+Weather uses geolocation and `weatherApiKey` in `src/environments/environment.ts`; any browser API key is visible to clients.
+Notes are stored in browser localStorage.
